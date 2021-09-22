@@ -1,4 +1,4 @@
-package com.student.doubts;
+package com.d.additionalconcepts;
 
 public class InterruptedExceptionDemo {
 

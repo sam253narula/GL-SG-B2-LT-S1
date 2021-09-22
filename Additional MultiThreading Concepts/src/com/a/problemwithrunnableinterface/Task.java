@@ -1,4 +1,4 @@
-package com.problemwithrunnableinterface;
+package com.a.problemwithrunnableinterface;
 
 import java.util.concurrent.Callable;
 

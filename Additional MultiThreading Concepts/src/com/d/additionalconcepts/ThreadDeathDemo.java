@@ -1,4 +1,4 @@
-package com.student.doubts;
+package com.d.additionalconcepts;
 
 public class ThreadDeathDemo {
     public static void main(String[] args) throws InterruptedException {

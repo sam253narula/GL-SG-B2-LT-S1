@@ -10,13 +10,12 @@ public class ProducerConsumerDemo {
 		BlockingQueue<Integer> blockingQueue = new LinkedBlockingDeque<Integer>(5);
 		
 		Thread producerThread = new Thread(new ProducerThread(blockingQueue));
-		
 		Thread consumerThread =  new Thread(new ConsumerThread(blockingQueue));
 		
 		producerThread.start();
 		consumerThread.start();
 		
-		producerThread.join();
-		consumerThread.join();
+	//	producerThread.join();
+	//	consumerThread.join();
 	}
 }

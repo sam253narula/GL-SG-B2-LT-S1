@@ -5,15 +5,15 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class MathUtils {
 
-	// Lock locker = new ReentrantLock();
-	synchronized
+	 Lock locker = new ReentrantLock();
+	//synchronized
 	void getMultiples(int n) {
 		System.out.println("Started 1");
 		System.out.println("Started 2");
 		System.out.println("Started 3");
 	//	synchronized (this) {
 			try {
-				// locker.lock();
+				 locker.lock();
 				for (int i = 1; i <= 5; i++) {
 					System.out.println(n * i);
 					try {
@@ -23,9 +23,9 @@ public class MathUtils {
 					}
 				}
 			} finally {
-				// locker.unlock();
+				 locker.unlock();
 			}
-//		}
+	//	}
 
 		System.out.println("Ended 1");
 		System.out.println("Ended 2");

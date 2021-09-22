@@ -19,14 +19,15 @@ public class ThreadPriorityDemo {
 		System.out.println("t2 priority : " + t2.getPriority());
 		System.out.println("t3 priority : " + t3.getPriority());
 
+		
 		t1.setPriority(4);
 		t2.setPriority(6);
 		t3.setPriority(9);
 		System.out.println("t1 new priority : " + t1.getPriority());
 		System.out.println("t2 new priority : " + t2.getPriority());
 		System.out.println("t3 new priority : " + t3.getPriority());
-
 		t1.setDaemon(true);
+	
 		System.out.println("new t1 priority acter making it deamon : " + t1.getPriority());
 
 		t1.start();

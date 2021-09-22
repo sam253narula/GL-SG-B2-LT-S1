@@ -1,4 +1,4 @@
-package com.problemwithrunnableinterface;
+package com.a.problemwithrunnableinterface;
 
 // SHow problem that when using runnable we cannot throw any checked exception
 public class ProblemWithRunnableInterface {

@@ -1,4 +1,4 @@
-package com.threadstate;
+package com.b.threadstate;
 
 /* When you search on Google "Java Thread States", you get
 The java thread states are as follows:
@@ -11,7 +11,7 @@ Waiting : A thread that is waiting indefinitely for another thread to perform a 
 A thread that is waiting indefinitely for another thread to perform a particular action is in this state
 Qin to Students: What is the Thread state when it is waiting with Thread.sleep(10000) method ?
 */
-public class ThreadStateForWaitingThreading {
+public class ThreadStateForWaitingThread {
     public static void main(String[] args) throws Exception {
         Thread t = new Thread() {
             public void run() {
