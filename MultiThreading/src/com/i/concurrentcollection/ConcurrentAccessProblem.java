@@ -6,15 +6,20 @@ import java.util.List;
 in same thread(This program runs in main thread. */
 public class ConcurrentAccessProblem {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		List<Integer> list  =  new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
 		list.add(4);
-		for (Integer integer : list) {
+//		for (Integer integer : list) {
+//			list.add(5);
+//			System.out.println(integer);
+//		}
+		int size = list.size();
+		for (int i = 0; i < size; i++) {
 			list.add(5);
-			System.out.println(integer);
+			System.out.println(list.get(i));
 		}
 	}
 }

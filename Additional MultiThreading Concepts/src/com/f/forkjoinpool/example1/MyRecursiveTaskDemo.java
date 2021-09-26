@@ -19,7 +19,7 @@ public class MyRecursiveTaskDemo extends RecursiveTask<Long> {
 
 	protected Long compute() {
 
-		// if work is above threshold, break tasks up into smaller tasks
+		// if workLoad is above threshold, break tasks up into smaller tasks
 		if (this.workLoad > 16) {
 			System.out.println("Splitting workLoad : " + this.workLoad);
 

@@ -16,11 +16,13 @@ public class SolutionWithCallableInterface {
 		// As it implements Runnable, create Thread with FutureTask
 		Thread t = new Thread(randomNumberTasks[0]);
 		t.start();
-		t.sleep(10000);
+		t.sleep(5000);
 		t.interrupt();
 
 		// As it implements Future, we can call get()
+		while(randomNumberTasks[0].isDone()){
 		System.out.println(randomNumberTasks[0].get());
+		}
 
 		// This method blocks till the result is obtained
 		// The get method can throw checked exceptions
