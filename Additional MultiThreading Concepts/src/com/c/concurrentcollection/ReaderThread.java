@@ -1,5 +1,6 @@
 package com.c.concurrentcollection;
 
+import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -17,7 +18,7 @@ public class ReaderThread extends Thread {
             ConcurrentHashMap.KeySetView<Integer, String> keySetView = map.keySet();
             Iterator<Integer> iterator = keySetView.iterator();
  
-            long time = System.currentTimeMillis();
+            LocalDateTime time = LocalDateTime.now();
             String output = time + ": " + name + ": ";
  
             while (iterator.hasNext()) {
@@ -29,7 +30,7 @@ public class ReaderThread extends Thread {
             System.out.println(output);
  
             try {
-                Thread.sleep(300);
+                Thread.sleep(1000);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
